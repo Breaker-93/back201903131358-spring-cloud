@@ -1,0 +1,20 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8770
+spring:
+  application:
+    name: service-config
+  cloud:
+    config:
+      server:
+        git:
+          uri:   # git仓库地址
+          search-paths:  # 仓库路径
+          username:
+          password:
+      label: master  #仓库的分支
+
