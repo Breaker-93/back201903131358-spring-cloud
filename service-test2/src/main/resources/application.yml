@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: service-test2
+  cloud:
+    config:
+      name: service-test2
+      label: master # 远程仓库的分支
+      profile: dev
+      uri: http://localhost:8770/ # 配置服务中心的地址
+server:
+  port: 8763
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://local.register.com:8761/eureka/
