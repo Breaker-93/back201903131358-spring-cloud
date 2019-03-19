@@ -2,7 +2,7 @@ spring:
   application:
     name: service-test2
 server:
-  port: 8763
+  port: 8764
 eureka:
   client:
     serviceUrl:
