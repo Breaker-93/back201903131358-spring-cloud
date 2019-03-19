@@ -1,2 +1,11 @@
+spring:
+  application:
+    name: service-test2
+server:
+  port: 8763
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://local.register.com:8761/eureka/
 foo: foo-version-1.0.0
 

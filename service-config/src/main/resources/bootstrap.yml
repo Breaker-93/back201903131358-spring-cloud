@@ -4,7 +4,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 server:
-  port: 8771
+  port: 8770
 spring:
   application:
     name: service-config
@@ -13,7 +13,7 @@ spring:
       server:
         git:
           uri: https://github.com/Breaker-93/back201903131358-spring-cloud # git仓库地址
-          search-paths:  service-config/src/main/resources/ # 仓库路径
+          search-paths:  service-config/src/main/resources/config/ # 仓库路径
           username:
           password:
       label: master  #仓库的分支
