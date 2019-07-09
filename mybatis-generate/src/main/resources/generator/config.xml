@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC " -//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <classPathEntry location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar"/>
+    <context id="breaker93" targetRuntime="MyBatis3">
+        <!--<commentGenerator>-->
+            <!--<property name="suppressDate" value="false"/>-->
+            <!--<property name="suppressAllComments" value="true"/>-->
+        <!--</commentGenerator>-->
+
+        <!-- 使用自带序列化插件 -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+
+        <!-- 使用自定义的插件 -->
+        <plugin type="com.breaker93.mybatisgenerate.LombokPlugin"/>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3307/shop_home"
+                        userId="root"
+                        password="123456"/>
+
+        <!-- 数据库类型与java类型转换 -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 生成Model类存放位置 -->
+        <javaModelGenerator targetPackage="com.breaker93.servicetest1.model"
+                            targetProject="G:\workspace-xyj\demos\back201903131358-spring-cloud\service-test1\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- 生成mapper.xml映射文件位置 -->
+        <sqlMapGenerator targetPackage="mapping"
+                         targetProject="G:\workspace-xyj\demos\back201903131358-spring-cloud\service-test1\src\main\resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 生成mapper接口文件位置 -->
+        <javaClientGenerator targetPackage="com.breaker93.servicetest1.mapper"
+                             targetProject="G:\workspace-xyj\demos\back201903131358-spring-cloud\service-test1\src\main\java"
+                             type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!-- 需要生成的实体类对应的表名，多个实体类复制多份该配置即可 -->
+        <table tableName="HOME_ADV" domainObjectName="HomeAdv"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="HOME_ADV_POSITION" domainObjectName="HomeAdvPosition"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="HOME_FLOOR" domainObjectName="HomeFloor"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="HOME_FLOOR_GOODS" domainObjectName="HomeFloorGoods"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="HOME_ADV" domainObjectName="HomeAdv"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="HOME_GOODS_RECOMMEND" domainObjectName="HomeGoodsRecommend"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="HOME_HOT_GOODS" domainObjectName="HomeHotGoods"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="HOME_HOT_PREFECTURE" domainObjectName="HomeHotPrefecture"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="HOME_NAVIGATION" domainObjectName="HomeNavigation"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="HOME_WEB_CODE" domainObjectName="HomeWebCode"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="SHOP_SYS_LOG" domainObjectName="ShopSysLog"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+
+    </context>
+</generatorConfiguration>
